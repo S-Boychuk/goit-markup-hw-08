@@ -1,0 +1,38 @@
+.features__list {
+    display: flex;
+    gap: 30px;
+}
+
+.features__item {
+    flex-basis: calc((100% - 90px) / 4);
+    &::before {
+        display: block;
+        height: 120px;
+        margin-bottom: 30px;
+        content: "";
+        background: #f5f4fa;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+@each $iconName in antenna, clock, diagram, astronaut {
+    .#{$iconName}__icon::before {
+        background-image: url("../img/decorative-img/#{$iconName}.svg");
+    }
+}
+
+.features__subtitle {
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+
+    margin-bottom: 10px;
+}
+
+.features__text {
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
