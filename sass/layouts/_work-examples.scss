@@ -30,4 +30,8 @@
         padding-left: 27px;
         cursor: default;
     }
+
+    @media screen and (max-width: 1199.2px) {
+        display: none;
+    }
 }

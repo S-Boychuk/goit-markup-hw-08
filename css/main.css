@@ -68,7 +68,6 @@ img {
 }
 
 .container {
-  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -102,14 +101,27 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
 .section__title {
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
-  margin-bottom: 50px;
+}
+@media screen and (min-width: 1200px) {
+  .section__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 
 .header {
@@ -327,19 +339,35 @@ img {
   padding-left: 27px;
   cursor: default;
 }
+@media screen and (max-width: 1199.2px) {
+  .work-examples {
+    display: none;
+  }
+}
 
 .team {
   background: var(--secondary-light-color);
 }
 .team__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 .team__item {
   background: var(--primary-light-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  flex-basis: calc((100% - 90px) / 4);
+  flex-basis: 100%;
+}
+@media screen and (min-width: 768px) {
+  .team__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }
 .team__item > div {
   padding-top: 30px;
@@ -390,18 +418,30 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .section-clients-item {
-  width: 170px;
-  height: 92px;
+  flex-basis: calc((100% - 30px) / 2);
+}
+@media screen and (min-width: 768px) {
+  .section-clients-item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-clients-item {
+    flex-basis: calc((100% - 150px) / 6);
+  }
 }
 
 .section-clients-link {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   width: 100%;
