@@ -130,13 +130,11 @@ img {
 .header__container {
   display: flex;
   align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .header__container {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -150,11 +148,11 @@ img {
 
 .navigation {
   display: none;
-  align-items: center;
 }
 @media screen and (min-width: 768px) {
   .navigation {
     display: flex;
+    align-items: center;
   }
 }
 
@@ -195,13 +193,13 @@ img {
 
 .contacts {
   display: none;
-  margin-left: auto;
 }
 @media screen and (min-width: 768px) {
   .contacts {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-left: auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -374,16 +372,32 @@ img {
   background-size: cover;
   background-color: var(--bcg-hero-footer-color);
 }
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/decorative-img/hero-tel-img-2x.jpg);
+  }
+}
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/decorative-img/hero-img.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/decorative-img/hero-tablet-img.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/decorative-img/hero-tablet-img-2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/decorative-img/hero-img.jpg);
     padding-top: 200px;
     padding-bottom: 200px;
     height: 600px;
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/decorative-img/hero-img-2x.jpg);
   }
 }
 .hero__title {
@@ -404,7 +418,8 @@ img {
     max-width: 696px;
   }
 }
-.hero .order-btn {
+
+.order-btn {
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -418,12 +433,12 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 1200px) {
-  .hero .order-btn {
+  .order-btn {
     padding-right: 32px;
     padding-left: 32px;
   }
 }
-.hero .order-btn:hover, .hero .order-btn:focus {
+.order-btn:hover, .order-btn:focus {
   background-color: var(--hero-btm-active-color);
 }
 
@@ -970,9 +985,13 @@ body.modal-open {
 
 .modal-checkbox-label {
   display: flex;
-  align-items: center;
   justify-content: center;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 463px) {
+  .modal-checkbox-label {
+    align-items: center;
+  }
 }
 
 .modal-checkbox-text {
